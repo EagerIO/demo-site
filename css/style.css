@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box
+}
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table
+}
+
+.hvr-underline-from-left:before {
+  background: #2098d1;
+}
+
+.clearfix:after {
+  clear: both
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.3
+}
+
+body {
+  font-family: serif;
+  margin: 2em auto;
+  width: 48em;
+  max-width: 100%;
+  padding-left: .75em;
+  padding-right: .75em
+}
+
+hr {
+  height: 0;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0
+}
+
+.buy-button {
+  border: 2px solid #2098d1;
+  color: #2098d1;
+  line-height: 1;
+  padding: 1em 1em .9em;
+  border-radius: .1875em
+}
+
+#logo {
+  font-size: 4em
+}
+
+#logo a {
+  color: inherit;
+  text-decoration: none
+}
+
+#header, #body, #footer, hr {
+  margin: 2em 0
+}
+
+@media (min-width: 60em) {
+  html {
+    font-size: 20px
+  }
+}
+
+@media (min-width: 51.5em) {
+  body {
+    margin: 4em auto
+  }
+
+  #header, #body, #footer, hr {
+    margin: 3em 0
+  }
+
+  #logo {
+    font-size: 6.25em;
+    line-height: .6em
+  }
+
+  #header {
+    position: relative
+  }
+
+  #menu {
+    position: absolute;
+    right: 0;
+    bottom: 0
+  }
+}
+
+#menu a {
+  color: #808080;
+}
+
+#menu a:not(:last-child) {
+  margin-right: 1em
+}
+
+#menu a.active {
+  color: #000
+}
+
+#footer {
+  color: #808080
+}
+
+#photography .photo {
+  display: block;
+  float: left;
+  width: 30%
+}
+
+#photography img {
+  display: block;
+  max-width: 100%
+}
+
+#photography .photo:nth-child(3n + 1), #photography .photo:nth-child(3n + 2) {
+  margin-right: 5%
+}
+
+#photography .buy-button {
+  margin-top: 1em;
+  text-decoration: none;
+  text-align: center;
+  width: 100%
+}
+
+html.home-page {
+  min-height: 100%;
+  background: url("../resources/life.jpg");
+  background-size: cover;
+  color: #fff
+}
+
+html.home-page #header, html.home-page #footer {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .5)
+}
+
+html.home-page #footer {
+  color: #fff
+}
+
+html.home-page #menu {
+  position: static;
+  margin-top: 3em;
+  margin-bottom: 8em;
+  font-size: 2em
+}
+
+html.home-page #menu a {
+  margin: .5em 0;
+  line-height: 1;
+  float: left;
+  clear: left;
+  display: inline-block
+}
+
+html.home-page #menu a {
+  text-decoration: none;
+  color: #fff
+}
+
+#about p {
+  max-width: 25em
+}
+
+#about a {
+  color: #2098d1
+}
+
+#blog-listing {
+  margin: 3em 0 4em;
+}
+
+#blog-listing .post {
+  font-size: 1.5em;
+  margin-bottom: .25em
+}
+
+#blog-listing .post a {
+  color: inherit
+}
+
+#blog-post {
+  width: 30em;
+  max-width: 100%;
+  margin-bottom: 2em
+}
+
+#blog-post h2 {
+  margin-top: 0
+}
+
+#blog-post a {
+  color: #2098d1
+}
+
+#blog-post figure {
+  margin: 0 0 3em;
+  padding: 0
+}
+
+#blog-post figure img {
+  display: block;
+  max-width: 100%
+}
