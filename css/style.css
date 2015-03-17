@@ -128,7 +128,7 @@ hr {
 
 html.home-page {
   min-height: 100%;
-  background: url("../resources/life.jpg");
+  background: url("/images/life.jpg");
   background-size: cover;
   color: #fff
 }
