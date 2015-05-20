@@ -153,12 +153,10 @@ html.home-page #menu a {
   line-height: 1;
   float: left;
   clear: left;
-  display: inline-block
-}
-
-html.home-page #menu a {
+  display: inline-block;
   text-decoration: none;
-  color: #fff
+  color: #fff;
+  overflow: visible
 }
 
 #about p {
@@ -204,4 +202,91 @@ html.home-page #menu a {
 #blog-post figure img {
   display: block;
   max-width: 100%
+}
+
+/* Eager */
+
+.eager-banner, .eager-off-button, .eager-note, .eager-on-button {
+  position: fixed;
+  width: 256px;
+  right: 30px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .15), 0 2px 4px rgba(0, 0, 0, .15);
+  transition: box-shadow .15s ease-in-out;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  text-decoration: none
+}
+
+.eager-banner:hover, .eager-off-button:hover, .eager-on-button:hover {
+  box-shadow: 0 0 0 1px rgba(221, 7, 117, .5), 0 2px 4px rgba(0, 0, 0, .15);
+  transition: none;
+}
+
+.eager-off-button:after, .eager-on-button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(221, 7, 117);
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.eager-off-button:hover:after, .eager-on-button:hover:after {
+  opacity: .1;
+  transition: none;
+}
+
+.eager-banner, .eager-note {
+  bottom: 90px
+}
+
+.eager-banner {
+  background-image: url("/images/for-eager/eager-banner.png");
+  height: 190px
+}
+
+.eager-note {
+  background-image: url("/images/for-eager/eager-note.png");
+  height: 114px
+}
+
+.eager-off-button, .eager-on-button {
+  bottom: 30px;
+  height: 40px
+}
+
+.eager-off-button {
+  background-image: url("/images/for-eager/eager-off-button.png");
+}
+
+.eager-on-button {
+  background-image: url("/images/for-eager/eager-on-button.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .eager-banner, .eager-off-button, .eager-note, .eager-on-button {
+    box-shadow: 0 0 0 .5px rgba(0, 0, 0, .15), 0 2px 4px rgba(0, 0, 0, .15);
+  }
+
+  .eager-banner {
+    background-image: url("/images/for-eager/eager-banner@2x.png")
+  }
+
+  .eager-off-button {
+    background-image: url("/images/for-eager/eager-off-button@2x.png")
+  }
+
+  .eager-note {
+    background-image: url("/images/for-eager/eager-note@2x.png")
+  }
+
+  .eager-on-button {
+    background-image: url("/images/for-eager/eager-on-button@2x.png")
+  }
 }
