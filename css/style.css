@@ -213,6 +213,7 @@ html.home-page #menu a {
   border-radius: 3px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, .15), 0 2px 4px rgba(0, 0, 0, .15);
   transition: box-shadow .15s ease-in-out;
+  background-color: #fff;
   background-size: 100%;
   background-repeat: no-repeat;
   text-decoration: none
