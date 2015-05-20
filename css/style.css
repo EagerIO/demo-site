@@ -2,6 +2,11 @@
   box-sizing: border-box
 }
 
+html {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
 .clearfix:before, .clearfix:after {
   content: "";
   display: table
