@@ -1,4 +1,4 @@
-var ready, addBanner, addOffButton, addOnButton, addNote, apps, play, pathsEqual, ensurePath;
+var ready, addBanner, addOffButton, addOnButton, addNote, apps, play, playFromLocalStorageCurrentAppId, pathsEqual, ensurePath;
 
 ready = function(fn) {
   if (document.readyState != 'loading') {
@@ -55,6 +55,8 @@ ready(function(){
       addNote();
       addOnButton();
     }
+  } else {
+    playFromLocalStorageCurrentAppId();
   }
 });
 
@@ -107,7 +109,7 @@ apps = [
         key: 'vG072c9WT7qrCgEucqcz_smart-underline-icon.png'
       }
     },
-    demoPath: '/photography/'
+    demoPath: '/blog/'
   },
   {
     id: 'BurROp-cWQ3Y',
@@ -129,7 +131,7 @@ apps = [
         key: '9DgPMbQaQzcwljSEAaqQ_disqus-icon.png'
       }
     },
-    demoPath: '/blog/thailand/'
+    demoPath: '/blog/thailand/#disqus-demo'
   },
   {
     id: 'z1o4cnLQKenU',
@@ -151,7 +153,7 @@ apps = [
         key: 'ITZqwibSPa4EiVS3AaK9_hover-css-icon.png'
       }
     },
-    demoPath: '/photography/'
+    demoPath: '/'
   },
   {
     id: 'PoIrgiLyzYcP',
@@ -163,17 +165,6 @@ apps = [
       }
     },
     demoPath: '/'
-  },
-  {
-    id: '3sa_P_ftYXnj',
-    alias: 'google-analytics',
-    title: 'Google Analytics',
-    metadata: {
-      icon: {
-        key: 'Q8uc7ysQTtiScDu0X2sG_google-analytics-icon.png'
-      }
-    },
-    demoPath: '/photography/'
   }
 ];
 
@@ -190,8 +181,25 @@ play = function(appId) {
     return;
   }
 
-  ensurePath(app.demoPath);
+  if (!window.localStorage) {
+    return;
+  }
 
+  window.localStorage.currentAppAlias = app.alias;
+  if (ensurePath(app.demoPath)) {
+    playFromLocalStorageCurrentAppId();
+  }
+};
+
+playFromLocalStorageCurrentAppId = function() {
+  if (!window.localStorage) {
+    return;
+  }
+
+  if (window.localStorage.currentAppAlias) {
+    document.documentElement.setAttribute('data-current-demo-app-alias', window.localStorage.currentAppAlias);
+    delete window.localStorage.currentAppAlias;
+  }
 };
 
 pathsEqual = function(a, b) {
@@ -211,7 +219,7 @@ ensurePath = function(path) {
   }
 
   if (pathsEqual(sanitizedPath, path)) {
-    return;
+    return true;
   } else {
     navigatePath(path);
   }
