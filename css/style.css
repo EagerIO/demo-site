@@ -418,7 +418,8 @@ html[data-current-demo-app-alias="smartunderline"] .highlight {
   left: 4.6em;
 }
 
-eager-app .fb-like > span, eager-app .fb-like > span > iframe {
+html[data-current-demo-app-alias="smartunderline"] eager-app .fb-like > span, html[data-current-demo-app-alias="smartunderline"] eager-app .fb-like > span > iframe {
+  vertical-align: top !important;
   height: auto !important;
   width: auto !important;
   overflow: visible !important
