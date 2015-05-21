@@ -153,7 +153,7 @@ apps = [
         key: 'ITZqwibSPa4EiVS3AaK9_hover-css-icon.png'
       }
     },
-    demoPath: '/'
+    demoPath: '/photography/'
   },
   {
     id: 'PoIrgiLyzYcP',
