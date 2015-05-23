@@ -66,107 +66,43 @@ window.addEventListener('message', function(event) {
   }
 }, false);
 
-apps = [
-  {
-    id: 'DvuKIoU8iTOt',
-    alias: 'photoswipe',
-    title: 'PhotoSwipe',
-    metadata: {
-      icon: {
-        key: 'hIJSQ6fSVCcOXyZ8oye9_photo-swipe-icon.png'
-      }
-    },
-    demoPath: '/photography/'
-  },
-  {
-    id: 'fNjUnjurPXkD',
-    alias: 'gumroad',
-    title: 'Gumroad',
-    metadata: {
-      icon: {
-        key: 'mwmGjbgMR6i7BJjysBWL_gumroad.png'
-      }
-    },
-    demoPath: '/photography/'
-  },
-  {
-    id: 'w-B2nEFkVIx7',
-    alias: 'social-icons',
-    title: 'Social Icons',
-    metadata: {
-      icon: {
-        key: '3qpSgatQByxdP40iveDw_social-icons-icon.png'
-      }
-    },
-    demoPath: '/photography/'
-  },
-  {
-    id: 'eA9ULux0UOJP',
-    alias: 'smartunderline',
-    title: 'SmartUnderline',
-    metadata: {
-      icon: {
-        key: 'vG072c9WT7qrCgEucqcz_smart-underline-icon.png'
-      }
-    },
-    demoPath: '/blog/'
-  },
-  {
-    id: 'BurROp-cWQ3Y',
-    alias: 'like-button',
-    title: 'Like Button',
-    metadata: {
-      icon: {
-        key: '0AoPcpqqSRWvPRwQJugR_like-button-icon.png'
-      }
-    },
-    demoPath: '/blog/thailand/'
-  },
-  {
-    id: '8KqAj3D-rZkN',
-    alias: 'disqus',
-    title: 'Disqus',
-    metadata: {
-      icon: {
-        key: '9DgPMbQaQzcwljSEAaqQ_disqus-icon.png'
-      }
-    },
-    demoPath: '/blog/thailand/#disqus-demo'
-  },
-  {
-    id: 'z1o4cnLQKenU',
-    alias: 'typist',
-    title: 'Typist',
-    metadata: {
-      icon: {
-        key: '6Q8q8IjpSKVV34BAKmZU_typist-icon.png'
-      }
-    },
-    demoPath: '/about/'
-  },
-  {
-    id: 'AN_LdP2tOk0f',
-    alias: 'hover',
-    title: 'Hover',
-    metadata: {
-      icon: {
-        key: 'ITZqwibSPa4EiVS3AaK9_hover-css-icon.png'
-      }
-    },
-    demoPath: '/photography/'
-  },
-  {
-    id: 'PoIrgiLyzYcP',
-    alias: 'animate',
-    title: 'Animate',
-    metadata: {
-      icon: {
-        key: 'aPPw3TGLRtqQgUwTb5is_animte-css-icon.png'
-      }
-    },
-    demoPath: '/'
-  }
-];
+apps = [{
+  id: 'DvuKIoU8iTOt',
+  alias: 'photoswipe',
+  demoPath: '/photography/'
+}, {
+  id: 'fNjUnjurPXkD',
+  alias: 'gumroad',
+  demoPath: '/photography/'
+}, {
+  id: 'w-B2nEFkVIx7',
+  alias: 'social-icons',
+  demoPath: '/photography/'
+}, {
+  id: 'eA9ULux0UOJP',
+  alias: 'smartunderline',
+  demoPath: '/blog/'
+}, {
+  id: 'BurROp-cWQ3Y',
+  alias: 'like-button',
+  demoPath: '/blog/malaysia/'
+}, {
+  id: '8KqAj3D-rZkN',
+  alias: 'disqus',
+  demoPath: '/blog/thailand/#disqus-demo'
+}, {
+  id: 'z1o4cnLQKenU',
+  alias: 'typist',
+  demoPath: '/about/'
+}, {
+  id: 'AN_LdP2tOk0f',
+  alias: 'hover',
+  demoPath: '/photography/'
+}, {
+  id: 'PoIrgiLyzYcP',
+  alias: 'animate',
+  demoPath: '/'
+}];
 
 play = function(appId) {
   var i, app;
