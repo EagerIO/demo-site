@@ -23,4 +23,4 @@ deployment:
   production:
     branch: master
     commands:
-      - ./stout deploy --env production --key $AMAZON_ACCESS_KEY --secret $AMAZON_SECRET_KEY
+      - ./stout deploy --env production --key $AWS_ACCESS_KEY --secret $AWS_SECRET_KEY
