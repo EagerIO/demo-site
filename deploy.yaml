@@ -1,0 +1,5 @@
+default:
+  files: 'index.html,about/*,blog/*,images/*,photography/*,without-eager/*'
+
+production:
+  bucket: 'photon.photos'
