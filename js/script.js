@@ -18,7 +18,7 @@ addBanner = function() {
 addOffButton = function() {
   var offButton = document.createElement('a');
   offButton.className = 'eager-off-button';
-  offButton.setAttribute('href', location.href.match('photonphotos.github.io') ? location.href.replace('/photonphotos.github.io', '/photonphotos.github.io/without-eager') : location.href.replace('/photon.photos', '/photon.photos/without-eager'));
+  offButton.setAttribute('href', '/without-eager' + document.location.pathname);
   document.body.appendChild(offButton);
 };
 
