@@ -344,6 +344,7 @@ html.home-page #menu a {
 
 .welcome-message .welcome-message-arrow.top-left:before {
   left: 0;
+  -webkit-transform: translateZ(0) rotateZ(45deg) translateX(50%) translateY(50%);
   transform: translateZ(0) rotateZ(45deg) translateX(50%) translateY(50%);
 }
 
@@ -394,7 +395,9 @@ html[data-current-demo-app-alias="hover"] .highlight[data-app-alias="hover"] .we
 html[data-current-demo-app-alias="animate"] .highlight[data-app-alias="animate"] .welcome-message,
 html[data-current-demo-app-alias="google-analytics"] .highlight[data-app-alias="google-analytics"] .welcome-message {
   opacity: 1;
+  -webkit-transform: translate3d(0, -50%, 0) scale(1);
   transform: translate3d(0, -50%, 0) scale(1);
+  -webkit-transition: opacity cubic-bezier(0, 0, .3, 1) .25s, -webkit-transform cubic-bezier(0, 0, .3, 1) .25s;
   transition: opacity cubic-bezier(0, 0, .3, 1) .25s, transform cubic-bezier(0, 0, .3, 1) .25s;
 }
 
@@ -497,6 +500,7 @@ html[data-current-demo-app-alias="animate"] .highlight {
   left: -.5em;
   transition: box-shadow .3s;
   box-shadow: 0 0 0 .25em #bf0c78;
+  -webkit-animation: home-anonymous-puslating-blinker 2s cubic-bezier(0, 0, .25, 1) infinite;
   animation: home-anonymous-puslating-blinker 2s cubic-bezier(0, 0, .25, 1) infinite;
 }
 
@@ -511,17 +515,21 @@ html[data-current-demo-app-alias="animate"] .highlight {
   border-radius: .1875em;
   padding: 1em;
   text-align: center;
+  -webkit-transition: opacity cubic-bezier(.5, 0, 1, 1) .15s, -webkit-transform cubic-bezier(.5, 0, 1, 1) .15s;
   transition: opacity cubic-bezier(.5, 0, 1, 1) .15s, transform cubic-bezier(.5, 0, 1, 1) .15s;
+  -webkit-transform: translate3d(0, -50%, 0) scale(.8);
   transform: translate3d(0, -50%, 0) scale(.8);
   opacity: 0;
 }
 
 .highlight .welcome-message.left {
+  -webkit-transform-origin: 125% 50%;
   transform-origin: 125% 50%;
   right: 3.5em;
 }
 
 .highlight .welcome-message.right {
+  -webkit-transform-origin: -25% 50%;
   transform-origin: -25% 50%;
   left: 3em;
 }
@@ -582,55 +590,55 @@ html[data-current-demo-app-alias="animate"] .highlight {
 @-moz-keyframes home-anonymous-puslating-blinker {
   0% {
     transform: scale(.1);
-    opacity: 0;
+    opacity: 0
   }
   25% {
-    opacity: .75;
+    opacity: .75
   }
   50%, 100% {
     transform: scale(1);
-    opacity: 0;
+    opacity: 0
   }
 }
 
 @-webkit-keyframes home-anonymous-puslating-blinker {
   0% {
-    transform: scale(.1);
-    opacity: 0;
+    -webkit-transform: scale(.1);
+    opacity: 0
   }
   25% {
-    opacity: .75;
+    opacity: .75
   }
   50%, 100% {
-    transform: scale(1);
-    opacity: 0;
+    -webkit-transform: scale(1);
+    opacity: 0
   }
 }
 
 @-o-keyframes home-anonymous-puslating-blinker {
   0% {
     transform: scale(.1);
-    opacity: 0;
+    opacity: 0
   }
   25% {
-    opacity: .75;
+    opacity: .75
   }
   50%, 100% {
     transform: scale(1);
-    opacity: 0;
+    opacity: 0
   }
 }
 
 @keyframes home-anonymous-puslating-blinker {
   0% {
     transform: scale(.1);
-    opacity: 0;
+    opacity: 0
   }
   25% {
     opacity: .75;
   }
   50%, 100% {
     transform: scale(1);
-    opacity: 0;
+    opacity: 0
   }
 }
