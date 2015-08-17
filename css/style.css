@@ -379,8 +379,7 @@ html[data-current-demo-app-alias="like-button"] .highlight[data-app-alias="like-
 html[data-current-demo-app-alias="disqus"] .highlight[data-app-alias="disqus"],
 html[data-current-demo-app-alias="typist"] .highlight[data-app-alias="typist"],
 html[data-current-demo-app-alias="hover"] .highlight[data-app-alias="hover"],
-html[data-current-demo-app-alias="animate"] .highlight[data-app-alias="animate"],
-html[data-current-demo-app-alias="google-analytics"] .highlight[data-app-alias="google-analytics"] {
+html[data-current-demo-app-alias="animate"] .highlight[data-app-alias="animate"] {
   display: block;
 }
 
@@ -392,8 +391,7 @@ html[data-current-demo-app-alias="like-button"] .highlight[data-app-alias="like-
 html[data-current-demo-app-alias="disqus"] .highlight[data-app-alias="disqus"] .welcome-message,
 html[data-current-demo-app-alias="typist"] .highlight[data-app-alias="typist"] .welcome-message,
 html[data-current-demo-app-alias="hover"] .highlight[data-app-alias="hover"] .welcome-message,
-html[data-current-demo-app-alias="animate"] .highlight[data-app-alias="animate"] .welcome-message,
-html[data-current-demo-app-alias="google-analytics"] .highlight[data-app-alias="google-analytics"] .welcome-message {
+html[data-current-demo-app-alias="animate"] .highlight[data-app-alias="animate"] .welcome-message {
   opacity: 1;
   -webkit-transform: translate3d(0, -50%, 0) scale(1);
   transform: translate3d(0, -50%, 0) scale(1);
