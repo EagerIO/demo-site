@@ -14,6 +14,7 @@ handleError = (err) ->
 gulp.task 'cloneToSiteWithoutEager', ->
   gulp.src([
     '!./without-eager/**/*.html'
+    '!./node_modules/**/*.html'
     './**/*.html'
   ])
     .pipe(removeLines({'filters': [
