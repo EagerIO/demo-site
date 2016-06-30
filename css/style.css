@@ -26,7 +26,8 @@ html {
 }
 
 body {
-  font-family: serif;
+  color: #202020;
+  font-family: Georgia, Times, serif;
   margin: 2em auto;
   width: 48em;
   max-width: 100%;
@@ -46,11 +47,12 @@ hr {
   color: #2098d1;
   line-height: 1;
   padding: 1em 1em .9em;
-  border-radius: .1875em
+  border-radius: .1875em;
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 #logo {
-  font-size: 4em
+  font-size: 3em
 }
 
 #logo a {
@@ -78,8 +80,8 @@ hr {
   }
 
   #logo {
-    font-size: 6.25em;
-    line-height: .6em
+    font-size: 4em;
+    line-height: .8
   }
 
   #header {
@@ -93,16 +95,22 @@ hr {
   }
 }
 
-#menu a {
-  color: #808080;
+html:not(.home-page) #menu a {
+  font-family: "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  background: #eee;
+  padding: .3em .7em;
+  border-radius: 9999em;
+  color: #808080
 }
 
-#menu a:not(:last-child) {
+html:not(.home-page) #menu a:not(:last-child) {
   margin-right: 1em
 }
 
-#menu a.active {
-  color: #000
+html:not(.home-page) #menu a.active {
+  background: #000;
+  color: #fff
 }
 
 #footer {
@@ -165,6 +173,10 @@ html.home-page #menu a {
   text-decoration: none;
   color: #fff;
   overflow: visible
+}
+
+#blog-post > h2:first-child, #about > h2:first-child {
+  font-family: "Helvetica Neue", sans-serif
 }
 
 #about p {
